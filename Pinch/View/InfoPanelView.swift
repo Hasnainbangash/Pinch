@@ -11,6 +11,12 @@ struct InfoPanelView: View {
     var body: some View {
         HStack {
             // MARK: - HOTSPOT
+            Image(systemName: "circle.circle")
+                .symbolRenderingMode(.hierarchical)
+                .resizable()
+                .frame(width: 30, height: 30)
+            
+            Spacer()
             
             // MARK: - INFO PANEL
         }
