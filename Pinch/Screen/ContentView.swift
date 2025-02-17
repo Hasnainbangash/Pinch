@@ -70,6 +70,11 @@ struct ContentView: View {
                     isAnimating = true
                 }
             }
+            // MARK: - INFO PANEL
+            .overlay (
+                InfoPanelView(scale: imageScale, offset: imageOffset),
+                alignment: .top
+            )
         } //: NAVIGATION
         // Stack navigation style will avoid using the sidebar on iPad devices
         .navigationViewStyle(.stack)
