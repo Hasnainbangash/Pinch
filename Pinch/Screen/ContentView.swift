@@ -175,7 +175,7 @@ struct ContentView: View {
                     
                     // MARK: - THUMBNAILS
                     ForEach(pages) { item in
-                        Image(item.imageName)
+                        Image(item.thumbnailName)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 80)
