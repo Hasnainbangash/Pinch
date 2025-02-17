@@ -40,7 +40,7 @@ struct ContentView: View {
                     .offset(x: imageOffset.width, y: imageOffset.height)
                     .scaleEffect(imageScale)
                 // MARK: - 1. TAP GESTURE
-                    // Double tap gesture
+                // Double tap gesture
                     .onTapGesture(count: 2) {
                         if imageScale == 1 {
                             withAnimation(.spring()) {
@@ -78,6 +78,36 @@ struct ContentView: View {
                     .padding(.horizontal)
                     .padding(.top, 30)
                 , alignment: .top
+            )
+            // MARK: - CONTROLS
+            .overlay (
+                Group {
+                    HStack {
+                        // SCALE DOWN
+                        Button {
+                            // Some action
+                        } label: {
+                            ControlImageView(icon: "minus.magnifyingglass")
+                        }
+                        
+                        // RESET
+                        Button {
+                            // Some action
+                        } label: {
+                            ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
+                        }
+                        
+                        // SCALE UP
+                        Button {
+                            // Some action
+                        } label: {
+                            ControlImageView(icon: "plus.magnifyingglass")
+                        }
+                        
+                    }  //: CONTROLS
+                }
+                    .padding(.bottom, 30)
+                , alignment: .bottom
             )
         } //: NAVIGATION
         // Stack navigation style will avoid using the sidebar on iPad devices
