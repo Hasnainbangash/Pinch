@@ -76,6 +76,13 @@ struct ContentView: View {
                                     }
                                 }
                             }
+                            .onEnded{ _ in
+                                if imageScale > 5 {
+                                    imageScale = 5
+                                } else if imageScale <= 1 {
+                                    resetImageState()
+                                }
+                            }
                     )
             } //: ZSTACK
             .navigationTitle("Pinch & Zoom")
